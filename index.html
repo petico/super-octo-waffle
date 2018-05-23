@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <meta charset="UTF-8">
+        <title>サイトのタイトル</title>
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css"  />
+<!--&#91;if lt IE 9&#93;>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<!&#91;endif&#93;-->
+    </head>
+    <body>
+        <div style="border: solid 1px;background-color: pink;">
+            <img src="" id="img"/>
+        </div>
+        <div>
+            <input type="file" id="file1"/>
+        </div>
+        <script type="text/javascript">
+        $(function(){
+            $("#file1").on("change", function(){
+                thumbnail.change_thumbanil("img", this.files[0]);
+            });
+
+        });
+        </script>
+    <script type="text/javascript" src="thumbnail.js"></script>
+    </body>
+</html>
